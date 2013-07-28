@@ -71,6 +71,11 @@
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
+								<artifact>
+									<id>org.fuin.srcgen4j:srcgen4j-commons:0.3.0-SNAPSHOT</id>
+									<transitive>false</transitive>
+									<override>false</override>
+								</artifact>
 							</artifacts>
 						</configuration>
 					</execution>
