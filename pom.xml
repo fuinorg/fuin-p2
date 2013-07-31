@@ -21,7 +21,7 @@
 			<plugin>
 				<groupId>org.reficio</groupId>
 				<artifactId>p2-maven-plugin</artifactId>
-				<version>1.0.0-SNAPSHOT</version>
+				<version>1.0.2-SNAPSHOT</version>
 				<executions>
 					<execution>
 						<id>generate-p2-site</id>
@@ -33,48 +33,57 @@
 							<artifacts>
 								<artifact>
 									<id>org.fuin.srcmixins4j:srcmixins4j-annotations:0.2.0</id>
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.fuin.srcmixins4j:srcmixins4j-core:0.2.0</id>
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.slf4j:slf4j-api:1.6.6</id>
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.slf4j:slf4j-log4j12:1.6.6</id>
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>log4j:log4j:1.2.17</id>
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.ops4j.pax.logging:pax-logging-api:1.7.0</id>
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.ops4j.pax.logging:pax-logging-service:1.7.0</id>
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.ops4j.pax.confman:pax-confman-propsloader:0.2.2</id>								
+									<source>true</source> 
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.fuin.srcgen4j:srcgen4j-commons:0.3.0-SNAPSHOT</id>
+									<source>true</source> 
 									<transitive>false</transitive>
-									<override>false</override>
+									<override>true</override>
 								</artifact>
 							</artifacts>
 						</configuration>
