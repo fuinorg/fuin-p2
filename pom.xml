@@ -21,7 +21,7 @@
 			<plugin>
 				<groupId>org.reficio</groupId>
 				<artifactId>p2-maven-plugin</artifactId>
-				<version>1.0.2-SNAPSHOT</version>
+				<version>1.0.3-SNAPSHOT</version>
 				<executions>
 					<execution>
 						<id>generate-p2-site</id>
@@ -81,6 +81,12 @@
 								</artifact>
 								<artifact>
 									<id>org.fuin.srcgen4j:srcgen4j-commons:0.3.0-SNAPSHOT</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>org.fuin.srcgen4j:srcgen4j-core:0.3.0-SNAPSHOT</id>
 									<source>true</source> 
 									<transitive>false</transitive>
 									<override>true</override>
