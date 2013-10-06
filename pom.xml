@@ -91,6 +91,48 @@
 									<transitive>false</transitive>
 									<override>true</override>
 								</artifact>
+								<artifact>
+									<id>org.fuin:utils4j:0.8.0-SNAPSHOT</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>org.fuin:objects4j:0.4.0-SNAPSHOT</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>javax.validation:validation-api:1.0.0.GA</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>commons-io:commons-io:2.4</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>org.apache.velocity:velocity:1.7</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>commons-collections:commons-collections:3.2.1</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>commons-lang:commons-lang:2.4</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
 							</artifacts>
 						</configuration>
 					</execution>
