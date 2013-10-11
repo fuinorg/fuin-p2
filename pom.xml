@@ -133,6 +133,12 @@
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
+								<artifact>
+									<id>org.hibernate:hibernate-validator:4.0.2.GA</id>
+									<source>true</source> 
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
 							</artifacts>
 						</configuration>
 					</execution>
