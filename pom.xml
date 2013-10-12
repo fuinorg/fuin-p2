@@ -32,13 +32,13 @@
 						<configuration>
 							<artifacts>
 								<artifact>
-									<id>org.fuin.srcmixins4j:srcmixins4j-annotations:0.2.0</id>
+									<id>org.fuin.srcmixins4j:srcmixins4j-annotations:0.3.0-SNAPSHOT</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin.srcmixins4j:srcmixins4j-core:0.2.0</id>
+									<id>org.fuin.srcmixins4j:srcmixins4j-core:0.3.0-SNAPSHOT</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
