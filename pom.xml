@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.fuin</groupId>
-	<artifactId>p2</artifactId>
-	<version>0.1.0</version>
+	<artifactId>fuin-p2-libraries</artifactId>
+	<version>0.2.0</version>
 	<packaging>pom</packaging>
 
-	<name>fuin-p2</name>
-	<description>fuin.org Eclipse P2 Repository</description>
-	<url>http://www.fuin.org/p2-repository</url>
+	<name>Libraries P2 Repository</name>
+	<description>Converts Maven Artifacts to Eclipse P2 Repository</description>
+	<url>http://www.fuin.org/p2-repository/libraries/index.html</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,109 +33,109 @@
 							<artifacts>
 								<artifact>
 									<id>org.fuin.srcmixins4j:srcmixins4j-annotations:0.2.0</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.fuin.srcmixins4j:srcmixins4j-core:0.2.0</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.slf4j:slf4j-api:1.6.6</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.slf4j:slf4j-log4j12:1.6.6</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>log4j:log4j:1.2.17</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.ops4j.pax.logging:pax-logging-api:1.7.0</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.ops4j.pax.logging:pax-logging-service:1.7.0</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.ops4j.pax.confman:pax-confman-propsloader:0.2.2</id>								
-									<source>true</source> 
+									<id>org.ops4j.pax.confman:pax-confman-propsloader:0.2.2</id>
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.fuin.srcgen4j:srcgen4j-commons:0.3.0-SNAPSHOT</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.fuin.srcgen4j:srcgen4j-core:0.3.0-SNAPSHOT</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.fuin:utils4j:0.8.0-SNAPSHOT</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.fuin:objects4j:0.4.0-SNAPSHOT</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>javax.validation:validation-api:1.0.0.GA</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>commons-io:commons-io:2.4</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.apache.velocity:velocity:1.7</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>commons-collections:commons-collections:3.2.1</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>commons-lang:commons-lang:2.4</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>org.hibernate:hibernate-validator:4.0.2.GA</id>
-									<source>true</source> 
+									<source>true</source>
 									<transitive>false</transitive>
 									<override>true</override>
 								</artifact>
@@ -149,13 +149,13 @@
 
 	<reporting>
 		<plugins>
-	        <plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-project-info-reports-plugin</artifactId>
-	            <version>2.7</version>
-	        </plugin>
-        </plugins>
-    </reporting>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
+		</plugins>
+	</reporting>
 
 	<pluginRepositories>
 		<pluginRepository>
@@ -163,7 +163,7 @@
 			<url>http://repo.reficio.org/maven/</url>
 		</pluginRepository>
 	</pluginRepositories>
-	
+
 	<repositories>
 		<repository>
 			<id>ops4j</id>
