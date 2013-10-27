@@ -137,7 +137,47 @@
 									<id>org.apache.commons:commons-vfs2:2.0</id>
 									<source>true</source>
 									<transitive>false</transitive>
-									<override>false</override>
+									<override>true</override>
+							        <instructions>
+										<Implementation-Title>Commons VFS Core</Implementation-Title>
+										<Implementation-Vendor>The Apache Software Foundation</Implementation-Vendor>
+										<Implementation-Vendor-Id>org.apache</Implementation-Vendor-Id>
+										<Implementation-Version>2.0</Implementation-Version>
+										<Specification-Title>Commons VFS Core</Specification-Title>
+										<Specification-Vendor>The Apache Software Foundation</Specification-Vendor>
+										<Specification-Version>2.0</Specification-Version>
+										<Bundle-Name>Commons VFS Core</Bundle-Name>
+										<Bundle-Vendor>The Apache Software Foundation</Bundle-Vendor>
+										<Bundle-Version>2.0</Bundle-Version>
+										<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+										<Bundle-License>http://www.apache.org/licenses/LICENSE-2.0.txt</Bundle-License>
+										<Bundle-Description>VFS is a Virtual File System library.</Bundle-Description>
+										<Bundle-SymbolicName>org.apache.commons.vfs</Bundle-SymbolicName>
+										<Bundle-DocURL>http://commons.apache.org/vfs/commons-vfs2/</Bundle-DocURL>
+										<Export-Package>*</Export-Package>
+										<Import-Package>
+										javax.crypto,
+										javax.crypto.spec,
+										javax.xml.parsers,
+										org.w3c.dom,
+										com.jcraft.jsch;resolution:=optional,
+										org.apache.commons.logging,
+										org.apache.commons.collections.map;resolution:=optional,
+										org.apache.commons.httpclient;resolution:=optional,
+										org.apache.commons.httpclient.auth;resolution:=optional,
+										org.apache.commons.httpclient.methods;resolution:=optional,
+										org.apache.commons.httpclient.params;resolution:=optional,
+										org.apache.commons.httpclient.util;resolution:=optional,
+										org.apache.commons.net.ftp;resolution:=optional,
+										org.apache.commons.net.ftp.parser;resolution:=optional,
+										org.apache.jackrabbit.webdav;resolution:=optional,
+										org.apache.jackrabbit.webdav.client.methods;resolution:=optional,
+										org.apache.jackrabbit.webdav.property;resolution:=optional,
+										org.apache.jackrabbit.webdav.version;resolution:=optional,
+										org.apache.jackrabbit.webdav.xml;resolution:=optional,
+										org.apache.tools.ant;resolution:=optional
+										</Import-Package>
+							        </instructions>
 								</artifact>
 								<artifact>
 									<id>org.apache.velocity:velocity:1.7</id>
