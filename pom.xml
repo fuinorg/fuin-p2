@@ -80,13 +80,13 @@
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin.srcgen4j:srcgen4j-commons:0.3.0-SNAPSHOT</id>
+									<id>org.fuin.srcgen4j:srcgen4j-commons:0.4.0-SNAPSHOT</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin.srcgen4j:srcgen4j-core:0.3.0-SNAPSHOT</id>
+									<id>org.fuin.srcgen4j:srcgen4j-core:0.4.0-SNAPSHOT</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
@@ -98,13 +98,19 @@
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin:objects4j:0.4.0-SNAPSHOT</id>
+									<id>org.fuin:objects4j:0.5.0-SNAPSHOT</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
 									<id>javax.validation:validation-api:1.0.0.GA</id>
+									<source>true</source>
+									<transitive>false</transitive>
+									<override>false</override>
+								</artifact>
+								<artifact>
+									<id>javax.validation:validation-api:1.1.0.Final</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
@@ -187,6 +193,18 @@
 								</artifact>
 								<artifact>
 									<id>org.hibernate:hibernate-validator:4.0.2.GA</id>
+									<source>true</source>
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>org.hibernate:hibernate-validator:5.1.0.Final</id>
+									<source>true</source>
+									<transitive>false</transitive>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>org.glassfish.web:el-impl:2.2</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>true</override>
