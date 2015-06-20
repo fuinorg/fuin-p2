@@ -92,13 +92,13 @@
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin:utils4j:0.8.0-SNAPSHOT</id>
+									<id>org.fuin:utils4j:0.8.0</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin:objects4j:0.5.0-SNAPSHOT</id>
+									<id>org.fuin:objects4j:0.6.1</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
