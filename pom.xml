@@ -17,11 +17,23 @@
 	</properties>
 
 	<build>
+
+		<extensions>
+
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-http</artifactId>
+				<version>2.12</version>
+			</extension>
+
+		</extensions>
+
 		<plugins>
+
 			<plugin>
 				<groupId>org.reficio</groupId>
 				<artifactId>p2-maven-plugin</artifactId>
-				<version>1.0.3-SNAPSHOT</version>
+				<version>1.2.0</version>
 				<executions>
 					<execution>
 						<id>generate-p2-site</id>
@@ -31,18 +43,22 @@
 						</goals>
 						<configuration>
 							<artifacts>
+								<!-- Temporarily exclude srcmixins4j - Currently it's not possible 
+									 to retrieve old 'emf' and 'emftext' dependencies that are needed as Maven 
+									 artifacts. 
 								<artifact>
-									<id>org.fuin.srcmixins4j:srcmixins4j-annotations:0.3.0-SNAPSHOT</id>
+									<id>org.fuin.srcmixins4j:srcmixins4j-annotations:0.3.0-SNAPSHOT</id> 
 									<source>true</source>
 									<transitive>false</transitive>
-									<override>false</override>
+									<override>false</override> 
 								</artifact>
 								<artifact>
-									<id>org.fuin.srcmixins4j:srcmixins4j-core:0.3.0-SNAPSHOT</id>
+									<id>org.fuin.srcmixins4j:srcmixins4j-core:0.3.0-SNAPSHOT</id> 
 									<source>true</source>
 									<transitive>false</transitive>
-									<override>false</override>
+									<override>false</override> 
 								</artifact>
+								-->
 								<artifact>
 									<id>org.slf4j:slf4j-api:1.6.6</id>
 									<source>true</source>
@@ -80,13 +96,13 @@
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin.srcgen4j:srcgen4j-commons:0.4.0-SNAPSHOT</id>
+									<id>org.fuin.srcgen4j:srcgen4j-commons:0.4.0</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin.srcgen4j:srcgen4j-core:0.4.0-SNAPSHOT</id>
+									<id>org.fuin.srcgen4j:srcgen4j-core:0.4.0</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
@@ -144,7 +160,7 @@
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>true</override>
-							        <instructions>
+									<instructions>
 										<Implementation-Title>Commons VFS Core</Implementation-Title>
 										<Implementation-Vendor>The Apache Software Foundation</Implementation-Vendor>
 										<Implementation-Vendor-Id>org.apache</Implementation-Vendor-Id>
@@ -162,28 +178,28 @@
 										<Bundle-DocURL>http://commons.apache.org/vfs/commons-vfs2/</Bundle-DocURL>
 										<Export-Package>*</Export-Package>
 										<Import-Package>
-										javax.crypto,
-										javax.crypto.spec,
-										javax.xml.parsers,
-										org.w3c.dom,
-										com.jcraft.jsch;resolution:=optional,
-										org.apache.commons.logging,
-										org.apache.commons.collections.map;resolution:=optional,
-										org.apache.commons.httpclient;resolution:=optional,
-										org.apache.commons.httpclient.auth;resolution:=optional,
-										org.apache.commons.httpclient.methods;resolution:=optional,
-										org.apache.commons.httpclient.params;resolution:=optional,
-										org.apache.commons.httpclient.util;resolution:=optional,
-										org.apache.commons.net.ftp;resolution:=optional,
-										org.apache.commons.net.ftp.parser;resolution:=optional,
-										org.apache.jackrabbit.webdav;resolution:=optional,
-										org.apache.jackrabbit.webdav.client.methods;resolution:=optional,
-										org.apache.jackrabbit.webdav.property;resolution:=optional,
-										org.apache.jackrabbit.webdav.version;resolution:=optional,
-										org.apache.jackrabbit.webdav.xml;resolution:=optional,
-										org.apache.tools.ant;resolution:=optional
+											javax.crypto,
+											javax.crypto.spec,
+											javax.xml.parsers,
+											org.w3c.dom,
+											com.jcraft.jsch;resolution:=optional,
+											org.apache.commons.logging,
+											org.apache.commons.collections.map;resolution:=optional,
+											org.apache.commons.httpclient;resolution:=optional,
+											org.apache.commons.httpclient.auth;resolution:=optional,
+											org.apache.commons.httpclient.methods;resolution:=optional,
+											org.apache.commons.httpclient.params;resolution:=optional,
+											org.apache.commons.httpclient.util;resolution:=optional,
+											org.apache.commons.net.ftp;resolution:=optional,
+											org.apache.commons.net.ftp.parser;resolution:=optional,
+											org.apache.jackrabbit.webdav;resolution:=optional,
+											org.apache.jackrabbit.webdav.client.methods;resolution:=optional,
+											org.apache.jackrabbit.webdav.property;resolution:=optional,
+											org.apache.jackrabbit.webdav.version;resolution:=optional,
+											org.apache.jackrabbit.webdav.xml;resolution:=optional,
+											org.apache.tools.ant;resolution:=optional
 										</Import-Package>
-							        </instructions>
+									</instructions>
 								</artifact>
 								<artifact>
 									<id>org.apache.velocity:velocity:1.7</id>
@@ -214,7 +230,31 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>wagon-maven-plugin</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<id>upload-repo</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+						<configuration>
+							<serverId>jfrog</serverId>
+							<fromDir>${project.build.directory}/repository</fromDir>
+							<includes>**/*</includes>
+							<url>https://fuinorg.jfrog.io/fuinorg/maven2osgi/</url>
+							<toDir>/</toDir>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
+
 	</build>
 
 	<reporting>
