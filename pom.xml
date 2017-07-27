@@ -42,6 +42,7 @@
 							<goal>site</goal>
 						</goals>
 						<configuration>
+							<categoryFileURL>${project.basedir}/category.xml</categoryFileURL>
 							<artifacts>
 								<!-- Temporarily exclude srcmixins4j - Currently it's not possible 
 									 to retrieve old 'emf' and 'emftext' dependencies that are needed as Maven 
