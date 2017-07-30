@@ -127,7 +127,7 @@
 									<override>false</override>
 								</artifact>
 								<artifact>
-									<id>org.fuin.dsl.ddd:ddd-templates:0.1.0-SNAPSHOT</id>
+									<id>org.fuin.dsl.ddd:ddd-templates:0.1.0</id>
 									<source>true</source>
 									<transitive>false</transitive>
 									<override>false</override>
