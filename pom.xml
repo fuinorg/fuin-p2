@@ -44,22 +44,6 @@
 						<configuration>
 							<categoryFileURL>${project.basedir}/category.xml</categoryFileURL>
 							<artifacts>
-								<!-- Temporarily exclude srcmixins4j - Currently it's not possible 
-									 to retrieve old 'emf' and 'emftext' dependencies that are needed as Maven 
-									 artifacts. 
-								<artifact>
-									<id>org.fuin.srcmixins4j:srcmixins4j-annotations:0.3.0-SNAPSHOT</id> 
-									<source>true</source>
-									<transitive>false</transitive>
-									<override>false</override> 
-								</artifact>
-								<artifact>
-									<id>org.fuin.srcmixins4j:srcmixins4j-core:0.3.0-SNAPSHOT</id> 
-									<source>true</source>
-									<transitive>false</transitive>
-									<override>false</override> 
-								</artifact>
-								-->
 								<artifact>
 									<id>org.slf4j:slf4j-api:1.6.6</id>
 									<source>true</source>
